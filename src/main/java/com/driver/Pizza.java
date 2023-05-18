@@ -33,7 +33,7 @@ public class Pizza {
             this.price+=cheesePrice;
         }
         if(isToppingsAdded){
-            this.price=myToppingPrice;
+            this.price+=myToppingPrice;
         }
         if(isTakeawayAdded){
             this.price+=takeawayPrice;
@@ -75,7 +75,7 @@ public class Pizza {
         if(isTakeawayAdded){
             bill+="Paperbag Added: "+takeawayPrice+"\n";
         }
-        bill+="Total Price: "+this.price+"\n";
+        bill+="Total Price: "+this.getPrice()+"\n";
         this.bill=bill;
         return this.bill;
     }
